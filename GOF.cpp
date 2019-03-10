@@ -139,7 +139,7 @@ int numberOfLinesInFile(string fileName){
 }
 
 int main(){
-    string fileName = "blinker.txt";
+    string fileName = "gosperGun.txt";
     int n = numberOfLinesInFile(fileName); // Size of square board
     bool** currentFrame;
     bool** nextFrame;
@@ -152,7 +152,7 @@ int main(){
         nextFrame = generateNextFrame(currentFrame, n);
         free(currentFrame);
         currentFrame = nextFrame;
-        sleep(1);
+        sleep(0.2);
         system("clear");
         print2DBooleanArray(currentFrame, n);
     }
