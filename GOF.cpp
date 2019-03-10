@@ -61,10 +61,17 @@ bool** generateFalseFrame(int n){
 }
 
 void print2DBooleanArray(bool** a, int n){
+    cout << " ";
+    for(int i = 0; i < n; i++) cout << "_";
+    cout << endl;
     for(int y = 0; y < n; y++){
+        cout << "|";
         for(int x = 0; x < n; x++) cout << getRepresentation(a[y][x]);
-        cout << endl;
+        cout << "|" << endl;
     }
+    cout << " ";
+    for(int i = 0; i < n; i++) cout << "_";
+    cout << endl;
 }
 
 char getRepresentation(bool x){
